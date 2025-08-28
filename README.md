@@ -1,30 +1,48 @@
-# Next.js Template
+# Responsive Navbar
+A responsive navigation built with next.js, tailwind css and shadcn/ui.
 
-A starter template repository with next.js using **app router**, pre-configured with typescript, shadcn/ui, tailwind css.
+## Table of contents
+
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Getting Started](#getting-started)
+  - [Cloning the repository](#cloning-the-repository)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Running the Development Server](#running-the-development-server)
+- [Author](#author)
+
+## My process
+
+### Built with
+
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/UI](https://ui.shadcn.com/)
 
 ## Getting Started
 
-Follow these steps to get a copy of the project up and running on your local machine
+Follow these steps to get a copy of the project up and running on your local machine.
 
-### Cloning the Repository
+### Cloning the repository
 
 ```sh
-git clone https://github.com/krutagna31/nextjs-shadcn-template.git
+git clone https://github.com/krutagna31/responsive-navbar.git
 ```
 
 ### Installing dependencies
 
 ```sh
-cd nextjs-template
+cd responsive-navbar
 npm install
-# or
-yarn install
 ```
 
-### Running the Development Server
+### Running the development server
 
 ```sh
-  npm run dev
-  # or
-  yarn dev
+npm run dev
 ```
+
+## Author
+
+- Website - [Krutagna Patel](https://flowcv.me/krutagna-patel)
