@@ -1,7 +1,5 @@
 # Responsive Navbar
 A responsive navigation built with next.js, tailwind css and shadcn/ui.
-jkjk
-A template file for my projects READMEs.
 
 ## Table of contents
 
