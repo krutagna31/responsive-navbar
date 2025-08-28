@@ -17,11 +17,13 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui";
 import {
-  CircleCheckIcon,
   CircleHelpIcon,
   CircleIcon,
   Moon,
   Sun,
+  CircleCheckIcon,
+  HamburgerIcon,
+  Menu,
 } from "lucide-react";
 
 const components: { title: string; href: string; description: string }[] = [
@@ -69,7 +71,7 @@ function Header() {
     <header className="py-3">
       <ViewContainer className="flex items-center justify-between">
         <Link href="#">Responsive Navbar</Link>
-        <NavigationMenu orientation="horizontal">
+        <NavigationMenu className="hidden lg:flex" viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Home</NavigationMenuTrigger>
@@ -178,7 +180,6 @@ function Header() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -208,26 +209,31 @@ function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div className="flex gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setTheme("light")}>
+                Light
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")}>
+                Dark
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")}>
+                System
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button variant="outline" size="icon">
+            <Menu />
+          </Button>
+        </div>
       </ViewContainer>
     </header>
   );
