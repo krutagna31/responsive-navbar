@@ -22,7 +22,6 @@ import {
   Moon,
   Sun,
   CircleCheckIcon,
-  HamburgerIcon,
   Menu,
 } from "lucide-react";
 
@@ -64,7 +63,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-function Header() {
+function SiteHeader() {
   const { setTheme } = useTheme();
 
   return (
@@ -259,4 +258,4 @@ function ListItem({
   );
 }
 
-export { Header };
+export { SiteHeader };
